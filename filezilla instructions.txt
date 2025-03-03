@@ -1,0 +1,12 @@
+Website Upload Steps
+FileZilla:
+Host: sftp://ftp.csulb.edu
+Username: 016405205
+Password: Ilovesips123
+Port:22
+
+1) Find htdocs folder
+** Left side: local server | Right Side: remote server
+2) Drag cecs110 folder into htdocs
+3) Go to Link here: 
+http://web.csulb.edu/~016405205/cecs110

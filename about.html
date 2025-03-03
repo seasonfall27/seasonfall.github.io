@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+<title>Autumn Nguyen Portfolio</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href=beach.css>
+<link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="bootstrap.min.js"></script>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="TweenMax.min.js"></script>
+<script src="jquery.min(1).js"></script>
+<script src="jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+<div id="header"><img src="logo.png" alt="header" class="image1"></div>
+</header>
+    <nav>
+    <ul>
+    <li><a href="index.html">Home Page</a></li>
+    <li><a href="about.html">Profile</a></li>
+    <li><a href="projects.html">Projects</a></li></ul>
+    </nav>
+
+<div class="container">
+    <br>
+ <div class="row">
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-6 gauche">
+<div class="card3">
+  <img src="GalleryPictures/photo8.jpg" alt="John" style="width:100%"><br>
+  <h1>Autumn Nguyen</h1><br>
+  <p class="title">Computer Science Student with an<br>Emphasis in Front End Development &<br>Design graduating in May 2021</p>
+<div id="socialShare">
+    <br>
+  <div class="socialBox pointer">
+    <span class="fa fa-share-alt"></span>
+    <div id="socialGallery">
+      <div class="socialToolBox">
+        <a class="linkedin" href="https://www.linkedin.com/in/autumn-nguyen/"><i class="fa fa-linkedin"></i></a>
+        <a class="facebook" href="https://www.facebook.com/profile.php?id=100007087819259"><i class="fa fa-facebook"></i></a>
+        <a class="youtube" href="https://www.youtube.com/channel/UCgIAFaaejT6r6ste2fkoDqw"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+    </div>
+  <div style="margin: -45px;">
+    </div>
+  <div class="col-lg-5 space">
+  <div class="card2"><div class="bio">
+      <div class="fontcolor">Full Name:</div> Autumn T. Nguyen<br><br>
+      <div class="fontcolor">Location:</div> Westminster, CA<br><br>
+      <div class="fontcolor">Education:</div><i> BS in Computer Science</i><br>California State University: Long Beach<br><small>Long Beach, CA · Fall 2018 – May 2021<br>Focus on UI/UX Design, Web Development, Front End<br>Development and Graphic and Visual Arts.</small><br><br>
+      <div class="fontcolor">About:</div>In college, she served as the President of the Xi Epsilon<br>Chapter of the Professional Engineering Fraternity:<br>Theta Tau.<br><br>Her professional experience include working as a<br> Prisma Access Software Engineer Intern at Palo Alto Networks and an Internal Communications & Design Intern at Orange County Transportation Authority.<br><br>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+      <form method="get" action="resume.pdf">
+   <button type="submit"><i class="fa fa-download"></i> Download Resume</button>
+      </form>
+</div>
+  </div>
+  </div>
+  <div class="col-lg-4">
+  </div>
+      </div>
+ </div>
+
+<script>// add this rail gallery effect
+$(document).on('click', '#socialShare > .socialBox', function() {
+
+  var self = $(this);
+  var element = $('#socialGallery a');
+  var c = 0;
+
+  if (self.hasClass('animate')) {
+    return;
+  }
+
+  if (!self.hasClass('open')) {
+
+    self.addClass('open');
+
+    TweenMax.staggerTo(element, 0.3, {
+        opacity: 1,
+        visibility: 'visible'
+      },
+      0.075);
+    TweenMax.staggerTo(element, 0.3, {
+        top: -12,
+        ease: Cubic.easeOut
+      },
+      0.075);
+
+    TweenMax.staggerTo(element, 0.2, {
+        top: 0,
+        delay: 0.1,
+        ease: Cubic.easeOut,
+        onComplete: function() {
+          c++;
+          if (c >= element.length) {
+            self.removeClass('animate');
+          }
+        }
+      },
+      0.075);
+
+    self.addClass('animate');
+
+  } else {
+
+    TweenMax.staggerTo(element, 0.3, {
+        opacity: 0,
+        onComplete: function() {
+          c++;
+          if (c >= element.length) {
+            self.removeClass('open animate');
+            element.css('visibility', 'hidden');
+          };
+        }
+      },
+      0.075);
+  }
+});</script>
+    </body>
+</html>
