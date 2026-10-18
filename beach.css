@@ -353,6 +353,8 @@ fieldset {
   width: 100%;
   margin-top: 15px;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 #socialShare a,
@@ -412,6 +414,13 @@ fieldset {
   transform: translate(-50%, 0);
   visibility: hidden;
   width: 400px;
+  z-index: 3;
+}
+
+.card3 form[method="get"][action="resume.pdf"],
+.card3 button[type="submit"] {
+  position: relative;
+  z-index: 1;
 }
 
 #socialGallery a {
@@ -487,7 +496,7 @@ fieldset {
 .card3 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 400px;
-  height: 650px;
+  height: 700px;
   margin-left: 10px;
   text-align: center;
 }
